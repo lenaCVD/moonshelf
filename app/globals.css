@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colores base */
+  --background: #7b6b8d;
+  --foreground: #f0eaf8;
+
+  /* Paleta inicial */
+  --color-primary: #c07898;
+  --color-primary-dark: #8a4a68;
+  --color-secondary: #9870c0;
+  --color-muted: #c8b8d8;
+  --color-surface: #6a5a7a;
+  --color-border: #a090c0;
+
+  /* Tipografía */
+  --font-display: 'Hachi Maru Pop', cursive;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@font-face{
+  font-family: 'Hachi Maru Pop ';
+  src: url('/fonts/HachiMaruPop-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-muted: var(--color-muted);
+  --color-surface: var(--color-surface);
+  --color-border: var(--color-border);
+
+  --font-display: var(--font-display);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+main {
+  background: var(--background)
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+h1{
+  font-family: var(--font-display);
 }
