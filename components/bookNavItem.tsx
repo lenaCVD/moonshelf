@@ -19,7 +19,7 @@ export default function BookNavItem({ href, src, srcHover, alt }: BookNavItemPro
       <button
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
-        className="relative transition-all active:translate-y-[-20px] -translate-y-6"
+        className="relative transition-all active:translate-y-1"
       >
         <Image
           src={isHover ? srcHover : src}

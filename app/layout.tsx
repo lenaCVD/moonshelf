@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { hachiMaru } from "./ui/fonts";
 import "./globals.css";
-import Bottomnav from "./ui/components/botNav";
 
 export const metadata: Metadata = {
   title: "Moonshelf",
@@ -16,11 +15,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${hachiMaru.className} h-full antialiased pb-16`}
+      className={`${hachiMaru.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {children}
-        <Bottomnav />
       </body>
     </html>
   );
